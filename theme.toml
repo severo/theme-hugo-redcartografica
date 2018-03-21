@@ -3,13 +3,13 @@
 
 name = "Cartografica"
 license = "MIT"
-licenselink = "https://framagit.org/severo/portfolios-theme/blob/master/LICENSE.md"
+licenselink = "//framagit.org/severo/portfolios-theme/blob/master/LICENSE.md"
 description = "Theme for the https://portfolios.rednegra.net/ website"
-homepage = "https://portfolios.rednegra.net/"
+homepage = "//portfolios.rednegra.net/"
 tags = ["portfolio"]
 features = []
 min_version = "0.1.0"
 
 [author]
   name = "Sylvain Lesage"
-  homepage = "https://rednegra.net/sylvainlesage/"
+  homepage = "//rednegra.net/sylvainlesage/"
