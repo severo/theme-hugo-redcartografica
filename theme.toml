@@ -3,19 +3,13 @@
 
 name = "Cartografica"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
-description = ""
-homepage = "http://example.com/"
-tags = []
+licenselink = "https://framagit.org/severo/portfolios-theme/blob/master/LICENSE.md"
+description = "Theme for the https://portfolios.rednegra.net/ website"
+homepage = "https://portfolios.rednegra.net/"
+tags = ["portfolio"]
 features = []
-min_version = "0.37.1"
+min_version = "0.1.0"
 
 [author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Sylvain Lesage"
+  homepage = "https://rednegra.net/sylvainlesage/"
