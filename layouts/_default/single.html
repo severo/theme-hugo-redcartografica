@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+
+{{ partial "header.html" . }}
+<body class='projects'>
+
+  <div class='pad2y limiter'>
+    <div class='body'>
+      <div class='project-box'>
+
+        {{ range $i := .Params.Resources }}
+        <a href='{{$i.params.url}}' class='project'>
+          <img src='{{$i.Src}}' alt="{{$i.Title}}" />
+          <strong>{{$i.Title}}</strong> <span>{{$i.params.description}}</span>
+        </a>
+        {{ end }}
+
+      </div>
+    </div>
+  </div>
+
+{{ partial "js.html" . }}
+
+</body>
+</html>
