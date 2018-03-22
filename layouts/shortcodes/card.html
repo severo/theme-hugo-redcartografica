@@ -1,6 +1,0 @@
-{{ $original := .Page.Resources.GetMatch (printf "%s*" (.Get "imgname")) }}
-{{ $image := $original.Resize "300x300" }}
-<a href='{{ .Get "url" }}' class='card'>
-  <img src='{{ $image.RelPermalink }}' alt="{{.Get "title"}}" />
-  <strong>{{.Get "title"}}</strong> <span>{{.Get "description"}}</span>
-</a>

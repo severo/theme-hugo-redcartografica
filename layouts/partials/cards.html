@@ -1,0 +1,8 @@
+{{ range $card := .Params.Cards }}
+{{ $original := $.Page.Resources.GetMatch (printf "%s*" ( $card.imgname )) }}
+{{ $image := $original.Resize "300x300" }}
+<a href='{{ $card.url }}' class='card'>
+  <img src='{{ $image.RelPermalink }}' alt="{{ $card.title }}" />
+  <strong>{{ $card.title }}</strong> <span>{{ $card.description }}</span>
+</a>
+{{ end }}
