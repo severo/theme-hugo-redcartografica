@@ -82,6 +82,25 @@ a.card:hover, .card a:hover {
   font-size: 1.5rem;
 }
 
+a.social {
+  display: inline-block;
+  font-size: 1.25rem;
+  border: 1px solid;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  vertical-align: middle;
+  padding: 0;
+  text-align: center;
+  border-radius: 50%;
+}
+
+a.social:hover {
+  background-color: #333;
+  border-color: #333;
+  color: #FFF;
+}
+
 /* Layout, margins and paddings */
 body {
   margin: 80px auto;

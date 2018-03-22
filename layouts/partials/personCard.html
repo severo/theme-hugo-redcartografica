@@ -5,6 +5,6 @@
   <img src='{{ $image.RelPermalink }}' alt="{{ $card.title }}" />
   <h1>{{ $card.name }}</h1>
   {{ range $s := $card.social }}
-    <a href="{{ $s.url }}"><i class="fa {{ $s.icon}}"></i></a>
+    <a class="social" href="{{ $s.url }}"><i class="fa {{ $s.icon}}"></i></a>
   {{ end }}
 </span>
