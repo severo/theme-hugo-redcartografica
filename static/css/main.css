@@ -1,8 +1,8 @@
 /* Adapted from https://macwright.org/projects/ */
 
+/* Sizes, fonts, texts style, colors */
 body {
   color: rgba(0,0,0,.9);
-  margin: 80px auto;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   line-height: 1.6;
@@ -37,22 +37,6 @@ h5 {
   font-size:.875rem
 }
 
-/* Links */
-a {
-}
-a:hover {
-  color: #000
-}
-a:visited {
-  color: #00008b
-}
-.body a:hover {
-  color: #333
-}
-a:hover {
-  color: #2f314b
-}
-
 /* Lists */
 ol,ul {
   margin: 1rem 0
@@ -73,13 +57,58 @@ ol li ul {
   font-size: 1rem
 }
 
+/* Card component */
+.card, .card a {
+  text-decoration: none;
+  color: #666;
+  padding-bottom: 1rem;
+}
+
+a.card:hover, .card a:hover {
+  color: #111;
+}
+
+.card img {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.highlighted.card {
+  border: 1px solid #111;
+  text-align: center;
+}
+
+.highlighted.card h1 {
+  font-size: 1.5rem;
+}
+
+/* Layout, margins and paddings */
+body {
+  margin: 80px auto;
+}
+
 /* Images */
 .body img {
   width: 100%;
   max-width: 640px
 }
 
-/* Layout */
+.pad2y {
+  padding-top: 20px;
+  padding-bottom: 20px
+}
+
+.cards .limiter {
+  max-width: 1200px;
+  padding: 0 40px;
+}
+.card-box {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+}
+
 .limiter {
   max-width: 640px;
   padding-left: 20px;
@@ -92,34 +121,6 @@ ol li ul {
     width: auto;
     padding: 0 20px
   }
-}
-
-/* Card component */
-.cards .limiter {
-  max-width: 1200px;
-  padding: 0 40px;
-}
-
-.card-box {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 40px;
-}
-
-a.card {
-  text-decoration: none;
-  color: #666;
-  padding-bottom: 1rem;
-}
-
-a.card:hover {
-  color: #000;
-}
-
-a.card img {
-  display: block;
-  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -141,17 +142,4 @@ a.card img {
   .card-box {
     grid-template-columns: repeat(1, 1fr);
   }
-}
-
-/* Margins and paddings */
-.pad2y {
-  padding-top: 20px;
-  padding-bottom: 20px
-}
-
-.highlighted {
-  background: none;
-  /*padding: 01rem 1rem 0;*/
-  border: 2px solid #666;
-  border-radius: 2px
 }

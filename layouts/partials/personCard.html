@@ -3,7 +3,7 @@
 {{ $image := $original.Fill "300x200" }}
 <span href='#' class='card highlighted'>
   <img src='{{ $image.RelPermalink }}' alt="{{ $card.title }}" />
-  <strong>{{ $card.name }}</strong>
+  <h1>{{ $card.name }}</h1>
   {{ range $s := $card.social }}
     <a href="{{ $s.url }}"><i class="fa {{ $s.icon}}"></i></a>
   {{ end }}
