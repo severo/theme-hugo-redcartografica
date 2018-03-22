@@ -61,7 +61,6 @@ ol li ul {
 .card, .card a {
   text-decoration: none;
   color: #666;
-  padding-bottom: 1rem;
 }
 
 a.card:hover, .card a:hover {
@@ -70,16 +69,19 @@ a.card:hover, .card a:hover {
 
 .card img {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.highlighted.card {
-  border: 1px solid #111;
+.highlighted.card .title {
+  border: 1px solid #d80394;
+  border-width: 1px 0;
   text-align: center;
+  color: #d80394;
+  padding: 1rem 0;
 }
 
-.highlighted.card h1 {
-  font-size: 1.5rem;
+.highlighted.card .title h1 {
+  margin-top: 0;
 }
 
 a.social {
@@ -96,8 +98,8 @@ a.social {
 }
 
 a.social:hover {
-  background-color: #333;
-  border-color: #333;
+  background-color: #d80394;
+  border-color: #d80394;
   color: #FFF;
 }
 
