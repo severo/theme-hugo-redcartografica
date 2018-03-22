@@ -1,18 +1,23 @@
 /* Adapted from https://macwright.org/projects/ */
 
 /* Sizes, fonts, texts style, colors */
+
+@font-face{font-family:'LeagueGothic';font-weight:bold;src:url("../fonts/leaguegothic-regular-webfont.ttf") format('truetype');}
+@font-face{font-family:'Alegreya';font-weight:normal;src:url("../fonts/Alegreya-Regular.otf") format('truetype');}
+
 body {
   color: rgba(0,0,0,.9);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   line-height: 1.6;
   font-size: 1rem;
-  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif
+  font-family: "Alegreya";
 }
 
 /* Titles */
 h1 {
-  font-size: 2.25rem
+  font-size: 2.25rem;
+  font-family: "LeagueGothic";
 }
 h1,h2 {
   margin-bottom:.5rem;
