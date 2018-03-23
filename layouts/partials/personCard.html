@@ -1,10 +1,10 @@
-{{ $card := .Params.PersonCard }}
-{{ $original := $.Page.Resources.GetMatch (printf "%s*" ( $card.imgname )) }}
+{{ $card := .Params.personCard }}
+{{ $original := .Resources.GetMatch (printf "%s*" ( $card.imgname )) }}
 {{ $image := $original.Fill "300x200" }}
 <span href='#' class='card highlighted'>
   <img src='{{ $image.RelPermalink }}' alt="{{ $card.title }}" />
   <div class='title'>
-    <h1>{{ $card.name }}</h1>
+    <a href="{{$.Permalink}}"><h1>{{ $card.name }}</h1></a>
     {{ range $s := $card.social }}
       <a class="social" href="{{ $s.url }}"><i class="fa {{ $s.icon}}"></i></a>
     {{ end }}

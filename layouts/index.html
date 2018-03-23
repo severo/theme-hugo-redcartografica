@@ -2,7 +2,17 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 
   {{ partial "header.html" . }}
-  <body>
+  <body class='cards'>
+
+    <div class='pad2y limiter'>
+      <div class='body'>
+        <div class='card-box'>
+          {{ range $p := .Data.Pages }}
+            {{ partial "personCard.html" $p }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
 
     {{ partial "js.html" . }}
 
