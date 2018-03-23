@@ -4,7 +4,7 @@
 name = "Cartografica"
 license = "MIT"
 licenselink = "//framagit.org/severo/portfolios-theme/blob/master/LICENSE.md"
-description = "Theme for the https://portfolios.rednegra.net/ website"
+description = "Theme for the https://portfolios.rednegra.net/ website. We used Material Design Icons to create images."
 homepage = "//portfolios.rednegra.net/"
 tags = ["portfolio"]
 features = []

@@ -1,8 +1,16 @@
+{{ if .Params.personCard }}
+
 {{ $card := .Params.personCard }}
+
 {{ $original := .Resources.GetMatch (printf "%s*" ( $card.imgname )) }}
-{{ $image := $original.Fill "300x200" }}
+{{ if $original }}
+  {{ $image := $original.Fill "300x200" }}
+  {{ $.Scratch.Set "imgurl" $image.RelPermalink }}
+{{ else }}
+  {{ $.Scratch.Set "imgurl" "/images/nobody.png" }}
+{{ end }}
 <span href='#' class='card highlighted'>
-  <img src='{{ $image.RelPermalink }}' alt="{{ $card.title }}" />
+  <img src='{{ $.Scratch.Get "imgurl" }}' alt="{{ $card.title }}" />
   <div class='title'>
     <a href="{{$.Permalink}}"><h1>{{ $card.name }}</h1></a>
     {{ range $s := $card.social }}
@@ -10,3 +18,5 @@
     {{ end }}
   </div>
 </span>
+
+{{ end }}

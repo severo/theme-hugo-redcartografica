@@ -1,8 +1,13 @@
 {{ range $card := .Params.Cards }}
 {{ $original := $.Page.Resources.GetMatch (printf "%s*" ( $card.imgname )) }}
-{{ $image := $original.Fill "300x200" }}
+{{ if $original }}
+  {{ $image := $original.Fill "300x200" }}
+  {{ $.Scratch.Set "imgurl" $image.RelPermalink }}
+{{ else }}
+  {{ $.Scratch.Set "imgurl" "/images/nothing.png" }}
+{{ end }}
 <a href='{{ $card.url }}' class='card'>
-  <img src='{{ $image.RelPermalink }}' alt="{{ $card.title }}" />
+  <img src='{{ $.Scratch.Get "imgurl" }}' alt="{{ $card.title }}" />
   <strong>{{ $card.title }}</strong> <span>{{ $card.description }}</span>
 </a>
 {{ end }}
