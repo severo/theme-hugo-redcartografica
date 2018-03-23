@@ -7,7 +7,7 @@
     <div class='pad2y limiter'>
       <div class='body'>
         <div class='card-box'>
-          {{ range $p := .Data.Pages }}
+          {{ range $p := .Data.Pages.ByTitle }}
             {{ partial "personCard.html" $p }}
           {{ end }}
         </div>
