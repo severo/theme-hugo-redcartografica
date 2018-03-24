@@ -16,6 +16,7 @@
     {{ range $s := $card.social }}
       <a class="social" href="{{ $s.url }}"><i class="fa {{ $s.icon}}"></i></a>
     {{ end }}
+    <div>{{ $card.description }}</div>
   </div>
 </span>
 
