@@ -8,6 +8,6 @@
 {{ end }}
 <a href='{{ $card.url }}' class="card" target="_blank">
   <img src='{{ $.Scratch.Get "imgurl" }}' alt="{{ $card.title }}" />
-  <strong>{{ $card.title }}</strong> <span>{{ $card.description }}</span>
+  <strong>{{ $card.title }}</strong> <span class="sep">|</span> <span>{{ $card.description }}</span>
 </a>
 {{ end }}
