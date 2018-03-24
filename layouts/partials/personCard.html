@@ -13,10 +13,11 @@
   <a href="{{$.Permalink}}"><img src='{{ $.Scratch.Get "imgurl" }}' alt="{{ $card.title }}" /></a>
   <div class='title'>
     <a href="{{$.Permalink}}"><h1>{{ $card.name }}</h1></a>
+    <div>{{ $card.short }}</div>
     {{ range $s := $card.social }}
       <a class="social" href="{{ $s.url }}"><i class="fa {{ $s.icon}}"></i></a>
     {{ end }}
-    <div>{{ $card.description }}</div>
+    <div>{{ $card.location }}</div>
   </div>
 
 </div>
