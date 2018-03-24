@@ -6,7 +6,7 @@
 {{ else }}
   {{ $.Scratch.Set "imgurl" "/images/nothing.png" }}
 {{ end }}
-<a href='{{ $card.url }}' class='card'>
+<a href='{{ $card.url }}' class="card" target="_blank">
   <img src='{{ $.Scratch.Get "imgurl" }}' alt="{{ $card.title }}" />
   <strong>{{ $card.title }}</strong> <span>{{ $card.description }}</span>
 </a>
