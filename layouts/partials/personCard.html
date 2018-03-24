@@ -9,8 +9,8 @@
 {{ else }}
   {{ $.Scratch.Set "imgurl" "/images/nobody.png" }}
 {{ end }}
-<span href='#' class='card highlighted'>
-  <img src='{{ $.Scratch.Get "imgurl" }}' alt="{{ $card.title }}" />
+<div href='#' class='card highlighted'>
+  <a href="{{$.Permalink}}"><img src='{{ $.Scratch.Get "imgurl" }}' alt="{{ $card.title }}" /></a>
   <div class='title'>
     <a href="{{$.Permalink}}"><h1>{{ $card.name }}</h1></a>
     {{ range $s := $card.social }}
@@ -18,6 +18,8 @@
     {{ end }}
     <div>{{ $card.description }}</div>
   </div>
-</span>
+
+</div>
+
 
 {{ end }}
