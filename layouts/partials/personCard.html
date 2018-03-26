@@ -2,7 +2,7 @@
 
 {{ $card := .Params.personCard }}
 
-{{ $original := .Resources.GetMatch (printf "%s*" ( $card.imgname )) }}
+{{ $original := .Resources.GetMatch (printf "**%s" ( $card.imgname )) }}
 {{ if $original }}
   {{ $image := $original.Fill "300x200" }}
   {{ $.Scratch.Set "imgurl" $image.RelPermalink }}

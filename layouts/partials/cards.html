@@ -1,5 +1,5 @@
 {{ range $card := .Params.Cards }}
-{{ $original := $.Page.Resources.GetMatch (printf "%s*" ( $card.imgname )) }}
+{{ $original := $.Page.Resources.GetMatch (printf "**%s" ( $card.imgname )) }}
 {{ if $original }}
   {{ $image := $original.Fill "600x400" }}
   {{ $.Scratch.Set "imgurl" $image.RelPermalink }}
