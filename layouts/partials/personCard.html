@@ -7,7 +7,7 @@
   {{ $image := $original.Fill "300x200" }}
   {{ $.Scratch.Set "imgurl" $image.RelPermalink }}
 {{ else }}
-  {{ $.Scratch.Set "imgurl" "/images/nobody.png" }}
+  {{ $.Scratch.Set "imgurl" "/images/nobody.svg" }}
 {{ end }}
 <div href='#' class='card highlighted'>
   <a href="{{$.Permalink}}"><img src='{{ $.Scratch.Get "imgurl" }}' alt="{{ $card.title }}" /></a>

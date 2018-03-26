@@ -4,7 +4,7 @@
   {{ $image := $original.Fill "600x400" }}
   {{ $.Scratch.Set "imgurl" $image.RelPermalink }}
 {{ else }}
-  {{ $.Scratch.Set "imgurl" "/images/nothing.png" }}
+  {{ $.Scratch.Set "imgurl" "/images/nothing.svg" }}
 {{ end }}
 <a href='{{ $card.url }}' class="card" target="_blank">
   <img src='{{ $.Scratch.Get "imgurl" }}' alt="{{ $card.title }}" />
