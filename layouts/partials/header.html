@@ -6,6 +6,7 @@
   {{ with .Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
   {{ partial "twitter.html" . }}
+  {{ partial "opengraph.html" . }}
 
   {{ .Hugo.Generator }}
 

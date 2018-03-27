@@ -1,0 +1,21 @@
+{{ with .Site.Title }}<meta name="og:site_name" content="{{ . }}">{{end}}
+{{ if .Params.personCard }}
+{{ $card := .Params.personCard }}
+{{ $original := .Resources.GetMatch (printf "**%s" ( $card.imgname )) }}
+{{ if $original }}
+  {{ $image := $original.Fill "600x400" }}
+  {{ $.Scratch.Set "imgurl" $image.Permalink }}
+{{ else }}
+  {{ $.Scratch.Set "imgurl" ("/images/nobody.svg" | absURL) }}
+{{ end }}
+<meta name="og:url" content="{{ $.Permalink }}" />
+<meta name="og:title" content="{{ $card.name }}" />
+<meta name="og:description" content="{{ $card.short }}" />
+<meta name="og:type" content="article" />
+<meta name="og:image" content="{{ $.Scratch.Get "imgurl" }}" />
+{{ else }}
+<meta name="og:url" content="{{ $.Permalink }}" />
+<meta name="og:title" content="{{ .Title }}" />
+<meta name="og:description" content="{{ .Site.Params.Description }}" />
+<meta name="og:image" content="" />
+{{ end }}
