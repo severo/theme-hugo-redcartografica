@@ -1,0 +1,23 @@
+{{ with .Site.Params.Twitter }}<meta name="twitter:site" content="@{{ . }}">{{end}}
+{{ if .Params.personCard }}
+{{ $card := .Params.personCard }}
+{{ $original := .Resources.GetMatch (printf "**%s" ( $card.imgname )) }}
+{{ if $original }}
+  {{ $image := $original.Fill "600x400" }}
+  {{ $.Scratch.Set "imgurl" $image.Permalink }}
+{{ else }}
+  {{ $.Scratch.Set "imgurl" ("/images/nobody.svg" | absURL) }}
+{{ end }}
+<meta name="twitter:url" content="{{ $.Permalink }}" />
+<meta name="twitter:title" content="{{ $card.name }}" />
+<meta name="twitter:description" content="{{ $card.short }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="{{ $.Scratch.Get "imgurl" }}" />
+{{ with $card.twitter }}<meta name="twitter:creator" content="@{{ . }}">{{end}}
+{{ else }}
+<meta name="twitter:url" content="{{ $.Permalink }}" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ .Site.Params.Description }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="" />
+{{ end }}

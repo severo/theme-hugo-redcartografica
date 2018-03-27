@@ -3,7 +3,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-  {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+  {{ with .Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+
+  {{ partial "twitter.html" . }}
+
   {{ .Hugo.Generator }}
 
   <title>{{ .Title }}{{ if not .IsHome }} &middot; {{ .Site.Title }}{{ end }}</title>
